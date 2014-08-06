@@ -1,0 +1,31 @@
+[Sun May  4 03:18:40 2014, 5407] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: server started listening on port 32123
+[Sun May  4 03:18:45 2014, 5407] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: connection from 127.0.0.1 at port 53406
+[Sun May  4 03:18:45 2014, 5407] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: child process created with pid 5428
+[Sun May  4 03:18:45 2014, 5428] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: client_action: client 127.0.0.1
+[Sun May  4 03:18:45 2014, 5428] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: request:
+------------------------------
+Method:  GET
+Object:  /
+Version: 1.0
+
+Headers:
+user-agent: Tinyproxy-Web-Client/0.1
+------------------------------
+[Sun May  4 03:18:45 2014, 5407] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: reaped 5428
+[Sun May  4 03:18:47 2014, 5407] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: connection from 127.0.0.1 at port 53408
+[Sun May  4 03:18:47 2014, 5407] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: child process created with pid 5430
+[Sun May  4 03:18:47 2014, 5430] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: client_action: client 127.0.0.1
+[Sun May  4 03:18:47 2014, 5430] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: request:
+------------------------------
+Method:  GET
+Object:  /
+Version: 1.0
+
+Headers:
+host: 127.0.0.3:32123
+connection: close
+via: 1.0 tinyproxy (tinyproxy/1.8.3)
+user-agent: Tinyproxy-Web-Client/0.1
+x-tinyproxy: 127.0.0.1
+------------------------------
+[Sun May  4 03:18:47 2014, 5407] /home/pi/tinyproxy-1.8.3-gamechanger-fork/./tests/scripts/webserver.pl: reaped 5430

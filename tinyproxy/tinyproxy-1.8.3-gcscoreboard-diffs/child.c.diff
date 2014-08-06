@@ -1,0 +1,11 @@
+34,36d33
+< /*included to allow for independent random seeding of child processes*/
+< #include "time.h"
+< #include "stdlib.h"
+193,196c190
+<  
+<         /*Seed this child with a random seed diff from other children*/
+<         srand((unsigned int) ptr + time(NULL));
+<   
+---
+> 

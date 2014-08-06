@@ -1,0 +1,102 @@
+51,52d50
+< /*needed for writing to output files*/
+< #include "stdio.h"
+523,541d520
+<         /*var declarations to support writing to output file*/
+<         char rand_name[9];
+<         char tempfile[255];
+<         char filename[254];
+<         FILE *fp;
+<         
+<         /*if configured to output to file, open file handles*/
+<         if (config.output_dir){
+<             sprintf(rand_name, "%04u%04u",(unsigned int) time(NULL)%9999, (unsigned int) rand() % 9999);
+<             sprintf (tempfile, "%s/.post-%s.web", config.output_dir, rand_name);
+<             sprintf (filename, "%s/post-%s.web", config.output_dir, rand_name);
+<     
+<              if ((fp=fopen(tempfile, "wb"))){
+<                  log_message (LOG_INFO, "%s opened for writing",filename);
+<              }
+<              else {
+<                  log_message (LOG_ERR, "%s could not be opened", filename);    
+<              }
+<         }
+555c534
+<                     if (safe_write (connptr->server_fd, buffer, len) < 0)
+---
+>                         if (safe_write (connptr->server_fd, buffer, len) < 0)
+557,560d535
+<                     /*Output to directory if so configured*/
+<                     if (config.output_dir){
+<                         fwrite( buffer, len, 1, fp);
+<                     }
+590,601d564
+< 
+<         /*Close out files if we were configured to write to them*/
+<         if (config.output_dir){
+<             if ( fclose(fp) ){
+<                 log_message (LOG_INFO, "%s closed.", filename);
+<             }
+<             else {
+<                 log_message (LOG_ERR, "Could not close %s.", filename);
+<             }
+<             rename (tempfile, filename);
+<         }
+<     
+662d624
+< 
+665d626
+<     
+671d631
+< 
+687d646
+< 
+694d652
+<             
+702d659
+< 
+728d684
+< 
+1183,1184c1139
+<         
+<         
+---
+> 
+1198c1153
+<                 if (buffer_size (connptr->sbuffer) > 0){
+---
+>                 if (buffer_size (connptr->sbuffer) > 0)
+1200d1154
+<                 }
+1203c1157
+<                 if (buffer_size (connptr->sbuffer) < MAXBUFFSIZE){
+---
+>                 if (buffer_size (connptr->sbuffer) < MAXBUFFSIZE)
+1205d1158
+<                 }
+1238,1240c1191,1193
+<                         if (bytes_received < 0){
+<                             break;
+<                         }
+---
+>                         if (bytes_received < 0)
+>                                 break;
+> 
+1255c1208
+<                     break;
+---
+>                         break;
+1257d1209
+< 
+1266,1268c1218,1219
+<             if (write_buffer (connptr->client_fd, connptr->sbuffer) < 0){
+<                 break;
+<             }
+---
+>                 if (write_buffer (connptr->client_fd, connptr->sbuffer) < 0)
+>                         break;
+1281,1282c1232
+<     return;
+< 
+---
+>         return;

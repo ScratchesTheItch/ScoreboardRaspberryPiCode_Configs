@@ -1,0 +1,20 @@
+166,168d165
+< /*Output directory handling subroutine to enable GC POST recovery*/
+< static HANDLE_FUNC (handle_output_dir);
+< 
+205,206d201
+<         /* Added to enable writing of POST data to output directories*/
+<         STDCONF ("outputdirectory", STR, handle_output_dir),
+296,297d290
+<         /*Added to enable POST data recovery to output directory*/
+<         safefree (conf->output_dir);
+511d503
+<     
+694,700d685
+< 
+< /*Handling subroutine to enable capture of POST data into output directory*/
+< static HANDLE_FUNC (handle_output_dir)
+< {
+<     return set_string_arg (&conf->output_dir, line, &match[2]);
+< }
+< 

@@ -1,0 +1,4 @@
+23a24,26
+> /* Forward declaration */
+> struct buffer_s;
+> 

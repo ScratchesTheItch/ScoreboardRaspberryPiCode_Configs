@@ -1,0 +1,24 @@
+<HTML>
+    <HEAD>
+        <TITLE>Change the scoreboard</TITLE>
+    </HEAD>
+    <BODY>
+        <FORM action="/cgi-bin/display.pl">
+            Away Score: <INPUT type="text" name=VScore value="0" size=2>
+            Home Score: <INPUT type="text" name=HScore value="0" size=2><BR>
+            My team is: <INPUT type="radio" name=Side value="Home">Home <INPUT type="radio" name=Side value="Away">Away<BR>
+            Inning: <INPUT type="text" name=Inning value="1" size=2>
+            <SELECT name=Half>
+                <OPTION label="Top" value="Top" size=6>Top</OPTION>
+                <OPTION label="Bottom" value="Bottom" size=6>Bottom</OPTION>
+            </SELECT><BR>
+            Balls: <INPUT type="text" name=Balls value="0" size=1><BR>
+            Strikes: <INPUT type="text" name=Strikes value="0" size=1><BR>
+            Outs: <INPUT type="text" name=Outs value="0" size=1><BR>
+            Runners on: 1st<INPUT type="checkbox" name=First>
+                2nd<INPUT type="checkbox" name=Second>
+                3rd<INPUT type="checkbox" name=Third><BR>
+            <INPUT type="submit" value="Send"><INPUT type="reset">
+        </FORM>
+    </BODY>
+</HTML>
