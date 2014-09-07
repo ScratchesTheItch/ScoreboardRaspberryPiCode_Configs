@@ -1,0 +1,8 @@
+MLB	Major League Baseball
+MLS	Major League Soccer
+EPL	European Premier League Soccer
+NBA	National Basketball Association
+NHL	National Hockey League
+NFL	National Football League
+CFB	NCAA Top 25 Football
+CBK	NCAA Top 25 Basketball
